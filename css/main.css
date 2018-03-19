@@ -1,0 +1,30 @@
+*{
+  font-size: 2rem;
+}
+
+header {
+  width: 100vw;
+}
+
+main {
+  margin-top: 30vh;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.equation-field {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10vh;
+  width: 50%;
+}
+
+#arrow {
+  position: absolute;
+  margin: 0;
+  width: 3%;
+}
