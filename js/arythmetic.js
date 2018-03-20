@@ -5,11 +5,12 @@ var number2 = result - number1;
 var startPoint = 22.4;
 var cmPercent = 2.75;
 
-var equationField = document.querySelector('.equation-field');
-equationField.innerHTML = "" + number1 + " + " + number2 + " = ?";
+$(".equation-field").html("" + number1 + " + " + number2 + " = ?");
+$(".arrow-container").width(number1 * cmPercent + "%");
 
-var arrow1 = document.querySelector('#arrow');
-arrow1.style.width = number1 * cmPercent + "%";
+
+var inputNumber = document.querySelector('.input-number');
+
 
 function randomize(min, max) {
   min = Math.ceil(min);

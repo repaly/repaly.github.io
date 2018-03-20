@@ -1,6 +1,4 @@
-* {
-  font-size: 2rem;
-}
+
 
 header {
   width: 100vw;
@@ -21,17 +19,37 @@ img {
   margin: 0 auto;
   padding-top: 10vh;
   width: 50%;
+  font-size: 3rem;
 }
 
+.arrow-container {
+ position: relative;
+ display: inline;
+ left: 22.4%;
+ top: 35px;
+ margin: 0;
+ height: 100px;
+ width: 16.5%; /* 16.5% до 6, один сантиметр равен 2.75 процента */
+}
 
  #arrow {
-  position: relative;
   display: inline;
-  left: 22.4%;
-  top: 35px;
-
   margin: 0;
+  height: inherit;
+  width: inherit; /* 16.5% до 6, один сантиметр равен 2.75 процента */
+}
 
-  height: 100px;
-  width: 16.5%; /* 16.5% до 6, один сантиметр равен 2.75 процента */
+.input-number {
+  position: absolute;
+  left: 50%;
+  top: -150px;
+  display: inline-block;
+  width: 1rem;
+  font-size: 2rem;
+  border: 2px solid #4F4F4F;
+  border-radius: 3px;
+
+  /* мигающий курсор убираю */
+  color: transparent;
+  text-shadow: 0 0 0 black;
 }
