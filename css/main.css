@@ -1,4 +1,4 @@
-*{
+* {
   font-size: 2rem;
 }
 
@@ -23,8 +23,15 @@ img {
   width: 50%;
 }
 
-#arrow {
-  position: absolute;
+
+ #arrow {
+  position: relative;
+  display: inline;
+  left: 22.4%;
+  top: 35px;
+
   margin: 0;
-  width: 3%;
+
+  height: 100px;
+  width: 16.5%; /* 16.5% до 6, один сантиметр равен 2.75 процента */
 }
