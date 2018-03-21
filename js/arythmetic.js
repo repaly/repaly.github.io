@@ -41,7 +41,7 @@ function addEventHandler(inputElement, trueAnswer, callBack) {
         if (counter == 2) {
           if ( $inputField.text() == trueAnswer) {
             $inputField.removeAttr("contenteditable");
-            $inputField.css("text-shadow", "0 0 0 green");
+            $inputField.css("border", "0");
           } else {
             $inputField.removeAttr("contenteditable");
             $inputField.css("text-shadow", "0 0 0 #ff7c7c");
