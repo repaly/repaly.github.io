@@ -2,6 +2,7 @@ var number1 = randomize(6, 9);
 var result = randomize(11, 14);
 var number2 = result - number1;
 var cmPercent = 2.75; /* один сантиметр равен 2.75 процента */
+var counter = 0;
 
 
 $(".equation-field").html("<span id='first-number'>" + number1 + "</span> + <span id='second-number'>" + number2 + "</span> = <span id='result-number'>?</span>");
@@ -33,7 +34,22 @@ function addEventHandler(inputElement, trueAnswer, callBack) {
     var keyValue = event.key;
 
     if ( !isNaN(parseInt(keyValue)) ) {
-      if (keyValue == trueAnswer) {
+
+      if ( $inputField.hasClass("final-input") ) {
+        counter += 1;
+        if (counter == 2) {
+          if ( $inputField.text() == trueAnswer) {
+            $inputField.removeAttr("contenteditable");
+            $inputField.css("text-shadow", "0 0 0 green");
+          } else {
+            $inputField.removeAttr("contenteditable");
+            $inputField.css("text-shadow", "0 0 0 #ff7c7c");
+            $inputField.attr("contenteditable", "true");
+          }
+          counter = 0;
+
+        }
+      } else if (keyValue == trueAnswer) {
         callBack();
         $linkedNumber.css("background-color", "");
         $inputField.removeAttr("contenteditable");
@@ -71,11 +87,16 @@ function createSecondArrow() {
 function createFinalInput() {
 
   var $resultNumber = $("#result-number");
-  var $inputField = $("<div class='input-number' contenteditable='true'> </div>");
+  var $inputField = $('<div>',{
+contenteditable: true,
+'class':'input-number'
+});
 
   $inputField.addClass("final-input");
   $resultNumber.empty();
   $resultNumber.append($inputField);
+
+  addEventHandler(".final-input", result);
 
 }
 
