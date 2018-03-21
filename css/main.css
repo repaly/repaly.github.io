@@ -25,18 +25,17 @@ img {
 .arrow-container {
  position: relative;
  display: inline;
- left: 22.4%;
+ left: 22.4%; /* начинается стрелка с нолика */
  top: 25px;
  margin: 0;
  height: 100px;
- width: 16.5%; /* 16.5% до 6, один сантиметр равен 2.75 процента */
 }
 
  #arrow {
   display: inline;
   margin: 0;
   height: inherit;
-  width: inherit; /* 16.5% до 6, один сантиметр равен 2.75 процента */
+  width: inherit;
 }
 
 .input-number {
@@ -52,4 +51,10 @@ img {
   /* мигающий курсор убираю */
   color: transparent;
   text-shadow: 0 0 0 black;
+}
+
+.final-input {
+  position: static;
+  width: 3rem;
+  font-size: 3rem;
 }
