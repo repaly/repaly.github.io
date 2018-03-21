@@ -26,6 +26,7 @@ function addEventHandler(inputElement, trueAnswer, callBack) {
 
   $inputField.click(function () {
     if ($inputField.attr("contenteditable") == "true") {
+      $inputField.css("text-shadow", "0 0 0 black");
       $inputField.empty();
     }
   });
